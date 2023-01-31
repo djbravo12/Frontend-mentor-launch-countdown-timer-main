@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;700&display=swap");
+
+:root {
+  --Grayish-blue: hsl(237, 18%, 59%);
+  --Soft-red: hsl(345, 95%, 68%);
+  --White: hsl(0, 0%, 100%);
+  --Dark-desaturated-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: hsl(235, 16%, 14%);
+  --Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  min-height: 100vh;
+  background-position: 50% 0%;
+  text-align: center;
+  background-image: url(./images/bg-stars.svg),
+    linear-gradient(var(--Dark-desaturated-blue), var(--Very-dark-blue));
+}
+
+header {
+  color: var(--White);
+  padding-block: 8em 2em;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  width: 80%;
+  margin-inline: auto;
+}
+
+main {
+  padding-block: 0.5em 11em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.flipbox-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-update-box {
+  width: 75px;
+
+  text-align: center;
+  color: var(--Soft-red);
+
+  font-weight: 700;
+  font-size: 2rem;
+
+  padding-block: 0.2rem;
+}
+
+.timeStamp {
+  color: var(--White);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-block-start: 1em;
+}
+
+.time-update-container {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    hsl(237, 18%, 59%, 0.4) 50%,
+    var(--Grayish-blue) 50%
+  );
+  border-radius: 3px;
+}
+
+.left-Circle,
+.right-Circle {
+  height: 8px;
+  width: 5px;
+  background-color: hsl(235, 16%, 14%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-Circle {
+  left: 0;
+  border-radius: 0 90px 90px 0;
+}
+
+.right-Circle {
+  right: 0;
+  border-radius: 90px 0 0 90px;
+}
+
+footer {
+  background-image: url(./images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 85% 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 5em 2em;
+}
+
+ul li {
+  list-style: none;
+  display: inline-block;
+  margin-inline: 1em;
+}
+
+li a i {
+  color: var(--Grayish-blue);
+  font-size: 2em;
+}
+
+li a i:hover {
+  color: var(--Soft-red);
+}
